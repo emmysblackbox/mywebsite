@@ -16,21 +16,62 @@
         .small-spacing {
             margin-top: 3px; /* Adjust the margin-top to control the spacing */
         }
+
+        .flash {
+            font-size: 3em; /* Adjust the font size for the animation text */
+        }
+
+        .flashing-section {
+            text-align: center;
+            margin-top: 5px; /* Add a 5-pixel top margin */
+        }
     </style>
 </head>
 <body>
+    <!-- New section with the flashing animation at the top -->
+    <div class="flashing-section">
+        <p class="flash">1234567</p>
+    </div>
+
     <div>
         <p>thank you for visiting my website</p>
         <p class="small-spacing"></p> <!-- Adjust the margin-top to control the spacing -->
-        <p>my name is emmy schwab, and I create various things under the name "emmy's black box"</p>
-	<p>here are links to some of those things:</p>
-	<p><a href="https://emmysblackbox.bandcamp.com" target="_blank">music</a>
-        </p>
-	<p><a href="https://emmysblackbox.buzzsprout.com" target="_blank">podcast</a>
-        </p>
-	<p>that's basically it for now</p>
-	<p>if you would like to contact me, please write to emmy@emmyschwab.com</a></p>
-	<p>thank you for visiting my website</p>
+        <p>my name is emmy schwab, and i create various things under the name "emmy's black box"</p>
+        <p>here are links to some of those things:</p>
+        <p><a href="https://emmysblackbox.bandcamp.com" target="_blank">music</a></p>
+        <p><a href="https://emmysblackbox.buzzsprout.com" target="_blank">podcast</a></p>
+        <p>that's basically it for now</p>
+        <p>if you would like to contact me, please write to <a href="mailto:emmy@emmyschwab.com">emmy@emmyschwab.com</a></p>
+        <p>thank you for visiting my website</p>
     </div>
+
+    <script>
+        // JavaScript for the flashing animation
+        const flashingSection = document.querySelector('.flashing-section');
+        const flashText = flashingSection.querySelector('.flash');
+        let interval = null; // Initialize interval as null
+
+        flashingSection.addEventListener('mouseover', () => {
+            flashText.textContent = 'welcome'; // Display "welcome" on hover
+            clearInterval(interval); // Clear any existing interval
+        });
+
+        flashingSection.addEventListener('mouseout', () => {
+            interval = setInterval(updateNumbers, 50); // Start flashing animation when mouse leaves
+        });
+
+        function updateNumbers() {
+            flashText.textContent = getRandomSevenDigits();
+        }
+
+        function getRandomSevenDigits() {
+            const min = 1000000;
+            const max = 9999999;
+            return Math.floor(Math.random() * (max - min + 1) + min).toString();
+        }
+
+        // Initial setup to start flashing
+        interval = setInterval(updateNumbers, 50);
+    </script>
 </body>
 </html>
