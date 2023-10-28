@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             background-color: black;
@@ -25,7 +26,6 @@
             margin-top: 5px;
         }
 
-        /* Define the animation for link text */
         @keyframes linkColorChange {
             0% { color: red; }
             14% { color: orange; }
@@ -37,20 +37,27 @@
             100% { color: red; }
         }
 
-        /* Style all links with the animated color change effect */
         a {
             text-decoration: underline;
             animation: linkColorChange 1s infinite linear alternate;
         }
 
-        /* Style visited (clicked) links with underlines */
         a:visited {
             text-decoration: underline;
+        }
+
+        /* Responsive CSS for smaller screens */
+        @media (max-width: 768px) {
+            body {
+                font-size: 1.2em;
+            }
+            .flash {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- New section with the flashing animation at the top -->
     <div class="flashing-section">
         <p class="flash">1234567</p>
     </div>
@@ -58,23 +65,22 @@
     <div>
         <p>thank you for visiting my website</p>
         <p class="small-spacing"></p>
-        <p>my name is emmy schwab, and I create various things under the name "emmy's black box"</p>
+        <p>my name is Emmy Schwab, and I create various things under the name "Emmy's Black Box"</p>
         <p>here are links to some of those things:</p>
         <p><a href="https://emmysblackbox.bandcamp.com" target="_blank">music</a></p>
         <p><a href="https://emmysblackbox.buzzsprout.com" target="_blank">podcast</a></p>
         <p>that's basically it for now</p>
-        <p>If you would like to contact me, please write to: emmy@emmyschwab.com</p>
+        <p>if you would like to contact me, please write to: emmy@emmyschwab.com</p>
         <p>thank you for visiting my website</p>
     </div>
 
     <script>
-        // JavaScript for the flashing animation
         const flashingSection = document.querySelector('.flashing-section');
         const flashText = flashingSection.querySelector('.flash');
         let interval = null;
 
         flashingSection.addEventListener('mouseover', () => {
-            flashText.textContent = 'welcome';
+            flashText.textContent = 'Welcome';
             clearInterval(interval);
         });
 
