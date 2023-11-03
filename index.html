@@ -26,20 +26,32 @@
             margin-top: 5px;
         }
 
-        @keyframes linkColorChange {
+        @keyframes musicColorChange {
             0% { color: red; }
-            14% { color: orange; }
-            28% { color: yellow; }
-            42% { color: green; }
-            57% { color: blue; }
-            71% { color: indigo; }
-            85% { color: violet; }
-            100% { color: red; }
+            20% { color: orange; }
+            40% { color: yellow; }
+            60% { color: green; }
+            80% { color: blue; }
+            100% { color: violet; }
         }
 
-        a {
+        @keyframes podcastColorChange {
+            0% { color: cyan; }
+            20% { color: magenta; }
+            40% { color: yellow; }
+            60% { color: green; }
+            80% { color: blue; }
+            100% { color: pink; }
+        }
+
+        a.music {
             text-decoration: underline;
-            animation: linkColorChange 1s infinite linear alternate;
+            animation: musicColorChange 0.5s infinite linear alternate;
+        }
+
+        a.podcast {
+            text-decoration: underline;
+            animation: podcastColorChange 0.7s infinite linear alternate;
         }
 
         a:visited {
@@ -65,10 +77,10 @@
     <div>
         <p>thank you for visiting my website</p>
         <p class="small-spacing"></p>
-        <p>my name is emmy schwab, and i create various things under the name "emmy's black box"</p>
+        <p>my name is emmy schwab, and I create various things under the name "emmy's black box"</p>
         <p>here are links to a couple of those things:</p>
-        <p><a href="https://emmysblackbox.bandcamp.com" target="_blank">music</a></p>
-        <p><a href="https://emmysblackbox.buzzsprout.com" target="_blank">podcast</a></p>
+        <p><a href="https://emmysblackbox.bandcamp.com" target="_blank" class="music">music</a></p>
+        <p><a href="https://emmysblackbox.buzzsprout.com" target="_blank" class="podcast">podcast</a></p>
         <p>that's basically it for now</p>
         <p>if you would like to contact me, please write to: emmy@emmyschwab.com</p>
         <p>thank you for visiting my website</p>
