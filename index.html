@@ -15,7 +15,8 @@
             padding-left: 20px;
         }
         .small-spacing {
-            margin-top: 3px;
+            margin-top: 1px; /* Smaller top margin */
+            margin-bottom: 1px; /* Smaller bottom margin */
         }
 
         .flash {
@@ -101,13 +102,15 @@
         });
 
         function updateNumbers() {
-            flashText.textContent = getRandomSevenDigits();
+            flashText.textContent = getRandomRandomDigits(20); // Change the number of digits here
         }
 
-        function getRandomSevenDigits() {
-            const min = 1000000;
-            const max = 9999999;
-            return Math.floor(Math.random() * (max - min + 1) + min).toString();
+        function getRandomRandomDigits(digits) {
+            let randomNumber = '';
+            for (let i = 0; i < digits; i++) {
+                randomNumber += Math.floor(Math.random() * 10);
+            }
+            return randomNumber;
         }
 
         interval = setInterval(updateNumbers, 50);
