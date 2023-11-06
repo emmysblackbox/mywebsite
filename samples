@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 1.25em;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            padding-left: 20px;
+        }
+
+	.big {
+            font-size: 3em; /* Adjust the font size as needed */
+        }
+
+        .medium {
+            font-size: 1.5em; /* Adjust the font size as needed */
+        }
+	.medium a {
+		color: #b7cb24;
+		text-decoration: underline;
+	}
+
+        .small {
+            font-size: 1em; /* Adjust the font size as needed */
+        }
+	.small a {
+		color: #24cbc4;
+		text-decoration: underline;
+    </style>
+</head>
+<body>
+    <div>
+        <p class="big">Writing Samples by Emmy Schwab</p>
+        <p class="medium">
+	<a href="https://drive.google.com/file/d/1SYg_o7Pec5OeYkdO5TjZuP43glZ8_RVl/view?usp=drive_link" target="_blank">VRWorkout USAF Program Proposal</a></p>
+	<p class="small">
+	I wrote this copy for virtual reality fitness company <a href="https://xrworkout.io/">XRWorkout</a>, for an Small Business Innovation Research grant outlining a possible partnership with the United States Air Force. 
+	</p>
+        <p class="medium">
+	<a href="https://drive.google.com/file/d/1svBrgtjEyDMMf9KIWLl0U8lk-4LJjgKf/view?usp=drive_link" target="_blank">Columbia Data Science Institute Researcher Profile</a></p>
+	<p class="small">
+	This is an assignment I wrote for <a href="https://datascience.columbia.edu/">Columbia University Data Science Institute</a>. I interviewed Orestis and wrote the attached story for DSI's communications office. 
+	</p>
+        <p class="medium"><a href="https://drive.google.com/file/d/1j-cIRBZZQYa8dJFJomtEpkf9u90SNIk6/view?usp=drive_link" target="_blank">DiveXR NeurotechX Global Hackathon</a>
+	</p>
+	<p class="small">
+	This is a presentation deck I produced as the final result of my work during the <a href="https://neurotechx.com/">NeurotechX</a> Global Hackathon 2022, at which my team received 2nd place out of 50+ teams.
+	</p>
+    </div>
+</body>
+</html>
