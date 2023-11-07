@@ -45,6 +45,11 @@
             100% { color: pink; }
         }
 
+        @keyframes bwColorChange {
+            0%, 100% { color: white; }
+            50% { color: black; }
+        }
+
         a.music {
             text-decoration: underline;
             animation: musicColorChange 0.5s infinite linear alternate;
@@ -53,6 +58,16 @@
         a.podcast {
             text-decoration: underline;
             animation: podcastColorChange 0.7s infinite linear alternate;
+        }
+
+        a.email {
+            text-decoration: underline;
+            animation: bwColorChange 1s infinite linear;
+        }
+
+        a.whatsapp {
+            text-decoration: underline;
+            animation: bwColorChange 1s infinite linear;
         }
 
         a:visited {
@@ -84,8 +99,8 @@
         <p><a href="https://emmysblackbox.buzzsprout.com" target="_blank" class="podcast">podcast</a></p>
         <p>that's basically it for now</p>
         <p>if you would like to contact me, you can:</p>
-        <p>write me an email at <a href="mailto:emmy@emmyschwab.com">emmy@emmyschwab.com</a></p>
-        <p>send me a message via <a href="https://wa.me/19738853013">whatsapp</a></p>
+        <p>write me an email at <a href="mailto:emmy@emmyschwab.com" class="email">emmy@emmyschwab.com</a></p>
+        <p>send me a message via <a href="https://wa.me/19738853013" class="whatsapp">whatsapp</a></p>
         <p>thank you for visiting my website</p>
     </div>
 
