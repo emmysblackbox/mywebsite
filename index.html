@@ -45,6 +45,15 @@
             100% { color: pink; }
         }
 
+        @keyframes writingSamplesColorChange {
+            0% { color: gold; }
+            20% { color: purple; }
+            40% { color: orange; }
+            60% { color: teal; }
+            80% { color: lime; }
+            100% { color: maroon; }
+        }
+
         @keyframes bwColorChange {
             0%, 100% { color: white; }
             50% { color: black; }
@@ -60,11 +69,12 @@
             animation: podcastColorChange 0.7s infinite linear alternate;
         }
 
-        a.email {
+        a.writing-samples {
             text-decoration: underline;
-            animation: bwColorChange 1s infinite linear;
+            animation: writingSamplesColorChange 0.8s infinite linear alternate;
         }
 
+        a.email,
         a.whatsapp {
             text-decoration: underline;
             animation: bwColorChange 1s infinite linear;
@@ -93,11 +103,12 @@
     <div>
         <p>thank you for visiting my website</p>
         <p class="small-spacing"></p>
-        <p>my name is emmy schwab, and I create various things under the name "emmy's black box"</p>
-        <p>here are links to a couple of those things:</p>
+        <p>i am a writer, musician, actor and community organizer.</p> 
+        <p>here are links to some things:</p>
+        <p><a href="https://emmyschwab.com/samples.html" class="writing-samples">writing samples</a></p>
         <p><a href="https://emmysblackbox.bandcamp.com" target="_blank" class="music">music</a></p>
         <p><a href="https://emmysblackbox.buzzsprout.com" target="_blank" class="podcast">podcast</a></p>
-        <p>that's basically it for now</p>
+        <p>initiatives for 2024 include releasing a new EP of original music, debuting my one-person show about jerry lewis's long-lost holocaust drama <em>the day the clown cried</em>, and continuing to foster community around ethical xr development as a founding member of the local new york city chapter of <a href="https:xrguild.org">xr guild</a></p>
         <p>if you would like to contact me, you can:</p>
         <p>write me an email at <a href="mailto:emmy@emmyschwab.com" class="email">emmy@emmyschwab.com</a></p>
         <p>send me a message via <a href="https://wa.me/19738853013" class="whatsapp">whatsapp</a></p>
