@@ -6,10 +6,15 @@
         body {
             background-color: black;
             color: white;
+            font-family: Courier, monospace;
             font-size: 1.5em;
             height: 100vh;
             margin: 0;
             padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
         div {
             padding-left: 20px;
@@ -18,130 +23,21 @@
             margin-top: 1px; /* Smaller top margin */
             margin-bottom: 1px; /* Smaller bottom margin */
         }
-
-        .flash {
-            font-size: 3em;
+        a {
+            color: #00ccff; /* Adjust link color to make it stand out on black background */
+            text-decoration: none;
         }
-
-        .flashing-section {
-            margin-top: 5px;
-        }
-
-        @keyframes musicColorChange {
-            0% { color: red; }
-            20% { color: orange; }
-            40% { color: yellow; }
-            60% { color: green; }
-            80% { color: blue; }
-            100% { color: violet; }
-        }
-
-        @keyframes podcastColorChange {
-            0% { color: cyan; }
-            20% { color: magenta; }
-            40% { color: yellow; }
-            60% { color: green; }
-            80% { color: blue; }
-            100% { color: pink; }
-        }
-
-        @keyframes writingSamplesColorChange {
-            0% { color: gold; }
-            20% { color: purple; }
-            40% { color: orange; }
-            60% { color: teal; }
-            80% { color: lime; }
-            100% { color: maroon; }
-        }
-
-        @keyframes bwColorChange {
-            0%, 100% { color: white; }
-            50% { color: black; }
-        }
-
-        a.music {
+        a:hover {
             text-decoration: underline;
-            animation: musicColorChange 0.5s infinite linear alternate;
-        }
-
-        a.podcast {
-            text-decoration: underline;
-            animation: podcastColorChange 0.7s infinite linear alternate;
-        }
-
-        a.writing-samples {
-            text-decoration: underline;
-            animation: writingSamplesColorChange 0.8s infinite linear alternate;
-        }
-
-        a.email,
-        a.whatsapp {
-            text-decoration: underline;
-            animation: bwColorChange 1s infinite linear;
-        }
-
-        a:visited {
-            text-decoration: underline;
-        }
-
-        /* Responsive CSS for smaller screens */
-        @media (max-width: 768px) {
-            body {
-                font-size: 1.2em;
-            }
-            .flash {
-                font-size: 2em;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="flashing-section">
-        <p class="flash">1234567</p>
-    </div>
-
     <div>
-        <p>thank you for visiting my website</p>
-        <p class="small-spacing"></p>
-        <p>i am a writer, musician, actor and community organizer.</p> 
-        <p>here are links to some things:</p>
-        <p><a href="https://emmyschwab.com/samples.html" class="writing-samples">writing samples</a></p>
-        <p><a href="https://emmysblackbox.bandcamp.com" target="_blank" class="music">music</a></p>
-        <p><a href="https://emmysblackbox.buzzsprout.com" target="_blank" class="podcast">podcast</a></p>
-        <p>initiatives for 2024 include releasing a new EP of original music, debuting my one-person show about jerry lewis's long-lost holocaust drama <em>the day the clown cried</em>, and continuing to foster community around ethical xr development as a founding member of the local new york city chapter of <a href="https:xrguild.org">xr guild</a></p>
+        <p>thank you for visiting my website.</p>
         <p>if you would like to contact me, you can:</p>
         <p>write me an email at <a href="mailto:emmy@emmyschwab.com" class="email">emmy@emmyschwab.com</a></p>
         <p>send me a message via <a href="https://wa.me/19738853013" class="whatsapp">whatsapp</a></p>
-        <p>thank you for visiting my website</p>
     </div>
-
-    <script>
-        const flashingSection = document.querySelector('.flashing-section');
-        const flashText = flashingSection.querySelector('.flash');
-        let interval = null;
-
-        flashingSection.addEventListener('mouseover', () => {
-            flashText.textContent = 'welcome';
-            clearInterval(interval);
-        });
-
-        flashingSection.addEventListener('mouseout', () => {
-            interval = setInterval(updateNumbers, 50);
-        });
-
-        function updateNumbers() {
-            flashText.textContent = getRandomRandomDigits(20); // Change the number of digits here
-        }
-
-        function getRandomRandomDigits(digits) {
-            let randomNumber = '';
-            for (let i = 0; i < digits; i++) {
-                randomNumber += Math.floor(Math.random() * 10);
-            }
-            return randomNumber;
-        }
-
-        interval = setInterval(updateNumbers, 50);
-    </script>
 </body>
 </html>
