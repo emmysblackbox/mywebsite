@@ -6,7 +6,7 @@
         body {
             background-color: black;
             color: white;
-            font-family: Courier, monospace;
+            font-family: courier, monospace;
             font-size: 1.5em;
             height: 100vh;
             margin: 0;
@@ -17,18 +17,22 @@
             text-align: center;
         }
         div {
-            padding-left: 20px;
-        }
-        .small-spacing {
-            margin-top: 1px; /* Smaller top margin */
-            margin-bottom: 1px; /* Smaller bottom margin */
+            padding: 0 10px; /* minimal horizontal padding */
+            max-width: 500px; /* restrict width on larger screens */
         }
         a {
-            color: #00ccff; /* Adjust link color to make it stand out on black background */
+            color: #00ccff;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
+        }
+        /* responsive adjustments for smaller screens */
+        @media (max-width: 600px) {
+            body {
+                font-size: 1.2em;
+                padding: 20px; /* add padding to avoid content touching screen edges */
+            }
         }
     </style>
 </head>
